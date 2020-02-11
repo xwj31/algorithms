@@ -1,5 +1,5 @@
 /*
-Mosaic Smart Data Java Developer Hiring Test
+
 Write a comparator to sort a list of tuples as per a given sort spec.  A tuple is a list of Comparables, some or all of
 which could be null. A sort spec specifies whether to sort a particular index in the tuple in ascending or descending order.
 Please note tuples may not necessarily be of the same size.
@@ -20,7 +20,7 @@ Ideally you:
   2) Ensure the "compare" method conforms to the specification of java.util.Comparator#compare(T o1, T o2)
   3) Resolve the compiler warnings associated with the “Comp” class 
 
-The exercise is typical of the kind of data manipulation tasks you might have to perform in a role with Mosaic.
+The exercise is typical of the kind of data manipulation tasks you might have to perform.
 There is no fixed time limit for completing the exercise, but it is timed and we would anticipate you should be able to
 complete this with 1.5 hours of beginning the exercise. There is no need to submit as the tool automatically saves your work and allows us to replay.
 Let us know when you're finished and we'll review your work.
