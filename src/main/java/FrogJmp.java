@@ -1,12 +1,6 @@
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
 
 public class FrogJmp {
 
-    List<List<Integer>> completeLoanQuoteSet = new ArrayList<>();
-    int loanAmount;
     int distance = 0;
     int jumps = 0;
 
@@ -23,8 +17,6 @@ public class FrogJmp {
         }
 
         return jumps;
-        //findRequestedTotalLoanByLeastLenders(loanQuotes, new ArrayList<>());
-
     }
 
     public static void main(String[] args) {

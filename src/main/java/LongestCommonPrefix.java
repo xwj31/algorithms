@@ -1,35 +1,35 @@
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
 
         StringBuilder outPutString = new StringBuilder();
 
-        char[] workingCharArray = strs[0].toCharArray();
+        List<Character> workingCharArray =
+                strs[0].chars().mapToObj(c -> (char) c).collect(Collectors.toList());
+
         List<char[]> workingList = new ArrayList<>();
 
         for (String str : strs) {
             workingList.addAll(Collections.singletonList(str.toCharArray()));
         }
-
         for (int i = 0; i < workingList.size(); i++) {
             for (int j = 0; j < workingList.get(i).length; j++) {
-                    if (workingList.get(i)[j] == workingCharArray[j]) {
-                        workingCharArray[j] = workingList.get(i)[j];
+                    if (workingList.get(i)[j] == workingCharArray.get(j)) { //TODO: fix: array out of bounds
+                        workingCharArray.set(j, workingList.get(i)[j]);
                     } else {
-                        workingCharArray[j] = 0;
+                        workingCharArray.set(j, (char) 0);
                     }
             }
         }
-
-        for (int i = 0; i < workingCharArray.length; i++) {
-            if (workingCharArray[i] != 0) {
-                outPutString.append(workingCharArray[i]);
+        for (Character character : workingCharArray) {
+            if (character != 0) {
+                outPutString.append(character);
             }
         }
-
         return outPutString.toString();
     }
 
