@@ -18,7 +18,7 @@ public class LongestCommonPrefix {
         }
         for (int i = 0; i < workingList.size(); i++) {
             for (int j = 0; j < workingList.get(i).length; j++) {
-                    if (workingList.get(i)[j] == workingCharArray.get(j)) { //TODO: fix: array out of bounds
+                    if (workingList.get(i)[j] == workingCharArray.get(j)) {
                         workingCharArray.set(j, workingList.get(i)[j]);
                     } else {
                         workingCharArray.set(j, (char) 0);

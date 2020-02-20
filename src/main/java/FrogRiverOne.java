@@ -11,7 +11,7 @@ public class FrogRiverOne {
             map.put(i, A[i]);
         }
 
-        int max = map.keySet().stream().max(Integer::compare).get();
+        int max = map.values().stream().max(Integer::compare).get();
 
         return map.get(max);
     }
