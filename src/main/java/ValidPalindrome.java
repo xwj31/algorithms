@@ -18,7 +18,6 @@ public class ValidPalindrome {
         return (Arrays.equals(stringBuilder.toString().toCharArray(), charArray));
     }
 
-
     public static void main(String[] args) {
         ValidPalindrome validPalindrome = new ValidPalindrome();
         System.out.println(validPalindrome.isPalindrome("A man, a plan, a canal: Panama") ? "Test passed" : "Test failed");
