@@ -10,6 +10,8 @@ public class AddProductsOfArray {
 
     public int[] addProductsOfArray(int[] array) {
 
+
+        return new int[]{};
     }
 
     public static void main(String[] args) {
