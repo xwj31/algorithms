@@ -1,27 +1,22 @@
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class CountLargestGroup {
 
     public int countLargestGroup(int n ) {
 
-        List<List<Integer>> workingList = new LinkedList<>();
-
-
-        for (int i = 0; i < n; i++) {
-            //IntStream chars = String.valueOf(i).chars();
-            int[] workingArray = String.valueOf(i).chars().map(Character::getNumericValue).toArray();
-            if (workingArray.length > 1) {
-                int sum = Arrays.stream(workingArray).sum();
-                if (!workingList.contains(sum)) {
-                    //workingList.add(sum);
-                }
-            } else if(!workingList.contains(i)){
-                //workingList.add(i);
-            }
+        int maxFreq = 0, dp[] = new int[n + 1], res = 1;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 1; i <= n; i++) {
+            dp[i] = i % 10 + dp[i / 10];
+            map.put(dp[i], map.getOrDefault(dp[i], 0) + 1);
         }
-        return workingList.size();
+        for (int key : map.keySet()) {
+            if (map.get(key) > maxFreq) {
+                maxFreq = map.get(key);
+                res = 1;
+            } else if (map.get(key) == maxFreq) res++;
+        }
+        return res;
     }
 
     public static void main(String[] args) {
