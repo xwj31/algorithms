@@ -13,7 +13,6 @@ public class MaximumProductOfTwoElementsInAnArray {
             else if(num > secondMax) secondMax = num;
         }
         return (max - 1) * (secondMax - 1);
-
     }
 
     public static void main(String[] args) {
