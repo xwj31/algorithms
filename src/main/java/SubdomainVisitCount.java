@@ -14,16 +14,9 @@ public class SubdomainVisitCount {
 
             String[] domainsByLevel = workingArrayPerItem.get(1).split("\\.");
 
-            workingMap.put(domainsByLevel[domainsByLevel.length-1], numberOfVisits);
 
-            if (domainsByLevel.length > 2) {
-                workingMap.put(domainsByLevel[domainsByLevel.length-2]+"."+domainsByLevel[domainsByLevel.length-1], numberOfVisits);
-            }
-
-            workingMap.put(workingArrayPerItem.get(1), numberOfVisits);
 
         }
-
         return null;
     }
 
