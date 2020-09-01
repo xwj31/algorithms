@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 /**
  *
  <p>Suppose you're given a binary tree represented as an array. For example, [3,6,2,9,-1,10] represents the following binary tree (where -1 is a non-existent node):</p>
@@ -20,11 +25,16 @@ public class BinaryTreeSizeComparison {
 
     public String solution(long[] arr) {
 
+        long leftSideSize = 0;
+        long rightSideSize = 0;
 
+        for (int i = 0; i < arr.length; i++) {
+            leftSideSize = leftSideSize + arr[2*i+1];
+            rightSideSize = rightSideSize + arr[2*i+2];
+        }
 
         return "null";
     }
-
 
     public static void main(String[] args) {
         BinaryTreeSizeComparison binaryTreeSizeComparison = new BinaryTreeSizeComparison();
