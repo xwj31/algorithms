@@ -60,6 +60,9 @@ public class ParkingSystem {
 
     public static void main(String[] args) {
         ParkingSystem parkingSystem = new ParkingSystem(1,1,0);
-        System.out.println(parkingSystem.addCar(1) ? "Test Failed" : "Test passed");
+        System.out.println(parkingSystem.addCar(1) ? "Test passed" : "Test failed");
+        System.out.println(parkingSystem.addCar(2) ? "Test passed" : "Test failed");
+        System.out.println(parkingSystem.addCar(3) ? "Test failed" : "Test passed");
+        System.out.println(parkingSystem.addCar(1) ? "Test passed" : "Test failed");
     }
 }
